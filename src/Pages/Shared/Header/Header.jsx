@@ -20,7 +20,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <Link to='/' className="btn btn-ghost normal-case text-xl"><img src={logo} alt="" /></Link>
-                    <p className='font-bold'>Furry Friends Bazaar</p>
+                    <p className='font-bold text-2xl'>Furry Friends Bazaar</p>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
