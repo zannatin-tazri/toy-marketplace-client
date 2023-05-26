@@ -3,13 +3,13 @@ import logo from '../../../../public/image.ico'
 
 const Header = () => {
     const navItems=<>
-    <li><Link>Home</Link> </li>
-    <li><Link>All Toys</Link> </li>
-    <li><Link>Blogs</Link> </li>
+    <li className=''><Link to='/'>Home</Link> </li>
+    <li className=''><Link to='/alltoys'>All Toys</Link> </li>
+    <li className=''><Link to='/blogs'>Blogs</Link> </li>
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 h-28">
+            <div className="navbar bg-base-100 h-28 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Header = () => {
                            {navItems}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl"><img src={logo} alt="" /></Link>
+                    <Link to='/' className="btn btn-warning bg-amber-300 normal-case text-xl me-2"> <img src={logo} alt="" /></Link>
                     <p className='font-bold text-2xl'>Furry Friends Bazaar</p>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -28,8 +28,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn mx-2">Login</Link>
-                    <Link className="btn">Register</Link>
+                    <Link to='/login' className="btn btn-warning bg-amber-300 mx-2 text-gray-600">Login</Link>
+                    <Link to='/register' className="btn btn-warning bg-amber-300 text-gray-600">Register</Link>
                 </div>
             </div>
         </div>
