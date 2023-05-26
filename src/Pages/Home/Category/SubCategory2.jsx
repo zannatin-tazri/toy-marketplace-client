@@ -14,7 +14,7 @@ const SubCategory2 = () => {
     }, [])
     return (
         <div>
-            <h1 className="text-center text-4xl font-bold">Teddy Bears</h1>
+            <h1 className="text-center text-4xl font-bold">Horse</h1>
             {
                 subCategories2.map(subCategory2 => <div className="grid grid-row-3 mt-5"
                     key={subCategory2.id}>

@@ -12,7 +12,12 @@ const Category = () => {
         setToggleState(index);
     };
     return (
-        <div className="container">
+        <div>
+
+            <hr />
+            <h1 className="font-bold text-6xl text-center mt-8">Toy Categories</h1>
+            <div className="container">
+            
             <div className="bloc-tabs">
                 <button
                     className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
@@ -30,7 +35,7 @@ const Category = () => {
                     className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
                     onClick={() => toggleTab(3)}
                 >
-                    dinosaur
+                    Dinosaur
                 </button>
             </div>
 
@@ -54,6 +59,8 @@ const Category = () => {
                 </div>
             </div>
         </div>
+        </div>
+        
     );
 };
 
