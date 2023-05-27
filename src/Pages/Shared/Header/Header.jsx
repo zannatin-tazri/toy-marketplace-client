@@ -29,11 +29,11 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     <Link to='/login' className="btn btn-warning bg-amber-300 mx-2 text-gray-600">Login</Link>
-                    <Link to='/register' className="btn btn-warning bg-amber-300 text-gray-600">Register</Link>
+                    <Link to='/register' className="btn btn-warning bg-amber-300 text-gray-600">Sign Up</Link>
                 </div>
             </div>
         </div>
     );
 };
-
+ 
 export default Header;
