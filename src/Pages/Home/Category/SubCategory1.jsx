@@ -8,7 +8,7 @@ const SubCategory1 = () => {
     const [subCategories1, setSubCategories1] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/teddyBear')
+        fetch('http://localhost:5000/teddy')
             .then(res => res.json())
             .then(data => setSubCategories1(data))
             .catch(error => console.log(error));
