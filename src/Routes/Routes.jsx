@@ -6,6 +6,9 @@ import Login from '../Pages/Home/Login/Login';
 import Register from '../Pages/Home/register/Register';
 import Blog from '../Pages/Home/blog/Blog';
 import AllToys from '../Pages/All toys/AllToys';
+import DinosaurDetails from '../Pages/viewDetails/DinosaurDetails';
+import TeddyDetails from '../Pages/viewDetails/teddyDetails';
+import HorseDetails from '../Pages/viewDetails/horseDetails';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -30,7 +33,20 @@ const router = createBrowserRouter([
         {
           path:'/alltoys',
           element: <AllToys></AllToys>
+        },
+        {
+          path:'/dinosaur',
+          element: <DinosaurDetails></DinosaurDetails>
+        },
+        {
+          path:'/teddy',
+          element:<TeddyDetails></TeddyDetails>
+        },
+        {
+          path: '/horse',
+          element: <HorseDetails></HorseDetails>
         }
+
       ]
     },
   ]);

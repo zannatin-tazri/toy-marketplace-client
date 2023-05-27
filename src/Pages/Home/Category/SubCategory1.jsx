@@ -2,6 +2,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 const SubCategory1 = () => {
@@ -27,7 +28,8 @@ const SubCategory1 = () => {
                             <p className="text-md decoration-gray-300 font-semibold">Ratings : {subCategory1.Rating}</p>
                             <p><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-outline btn-warning">View Details</button>
+                            <Link to='/teddy'><button className="btn btn-outline btn-warning ">
+                                    View Details</button></Link>
                             </div>
                         </div>
                     </div>
