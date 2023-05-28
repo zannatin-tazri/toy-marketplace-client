@@ -10,6 +10,7 @@ import DinosaurDetails from '../Pages/viewDetails/DinosaurDetails';
 import TeddyDetails from '../Pages/viewDetails/teddyDetails';
 import HorseDetails from '../Pages/viewDetails/horseDetails';
 import AllToysDetails from '../Pages/All toys/AllToysDetails';
+import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
         {
           path:'/allToysDetails',
           element: <AllToysDetails></AllToysDetails>
+        },
+        {
+          path:"/*",
+          element: <ErrorPage></ErrorPage>
         }
 
       ]
