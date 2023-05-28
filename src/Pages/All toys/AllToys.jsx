@@ -29,7 +29,7 @@ const AllToys = () => {
                         <p className="text-md decoration-gray-300 font-semibold">Ratings : {allToy.Rating}</p>
                         <p><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/><FontAwesomeIcon icon={faStar}/></p>
                         <div className="card-actions justify-end">
-                        <Link to='/teddy'><button className="btn btn-outline btn-warning ">
+                        <Link to='/allToysDetails'><button className="btn btn-outline btn-warning ">
                                 View Details</button></Link>
                         </div>
                     </div>

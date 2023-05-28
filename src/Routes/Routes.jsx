@@ -9,6 +9,7 @@ import AllToys from '../Pages/All toys/AllToys';
 import DinosaurDetails from '../Pages/viewDetails/DinosaurDetails';
 import TeddyDetails from '../Pages/viewDetails/teddyDetails';
 import HorseDetails from '../Pages/viewDetails/horseDetails';
+import AllToysDetails from '../Pages/All toys/AllToysDetails';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         {
           path: '/horse',
           element: <HorseDetails></HorseDetails>
+        },
+        {
+          path:'/allToysDetails',
+          element: <AllToysDetails></AllToysDetails>
         }
 
       ]
