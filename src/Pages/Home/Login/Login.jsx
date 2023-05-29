@@ -5,7 +5,7 @@ import { AuthContext } from "../../../provider/AuthProvider";
 
 const Login = () => {
 
-  const {login}=useContext(AuthContext);
+  const {login, loginWithGoogle}=useContext(AuthContext);
   const handleLogin=event=>{
     event.preventDefault();
     const form=event.target;
@@ -20,8 +20,14 @@ const Login = () => {
       form.reset();
     })
     .catch(error=>console.log(error));
+  }
 
-    
+  const handleGoogleLogin=()=>{
+    loginWithGoogle()
+    .then(result=>{
+      const loggedUser=result.user;
+      console.log(loggedUser);
+    }).catch(error=>console.log(error));
   }
     return (
         <div className="hero min-h-screen bg-base-50 ">
@@ -53,6 +59,10 @@ const Login = () => {
               </div>
               </form>
               <small>New to Furry Friends Bazaar? <Link className="text-amber-500" to='/register'>Register</Link> </small>
+
+              <div>
+                <button onClick={handleGoogleLogin} className=" m-4 btn btn-warning bg-amber-300 text-gray-600">Login with Google</button>
+              </div>
             </div>
           </div>
         </div>
