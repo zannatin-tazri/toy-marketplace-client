@@ -11,6 +11,8 @@ import TeddyDetails from '../Pages/viewDetails/teddyDetails';
 import HorseDetails from '../Pages/viewDetails/horseDetails';
 import AllToysDetails from '../Pages/All toys/AllToysDetails';
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
+import MyToys from '../Pages/MyToys';
+import PrivateRoute from './PrivateRoute';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -34,27 +36,31 @@ const router = createBrowserRouter([
         },
         {
           path:'/alltoys',
-          element: <AllToys></AllToys>
+          element: <PrivateRoute><AllToys></AllToys></PrivateRoute>
         },
         {
           path:'/dinosaur',
-          element: <DinosaurDetails></DinosaurDetails>
+          element: <PrivateRoute><DinosaurDetails></DinosaurDetails></PrivateRoute>
         },
         {
           path:'/teddy',
-          element:<TeddyDetails></TeddyDetails>
+          element:<PrivateRoute><TeddyDetails></TeddyDetails></PrivateRoute>
         },
         {
           path: '/horse',
-          element: <HorseDetails></HorseDetails>
+          element: <PrivateRoute><HorseDetails></HorseDetails></PrivateRoute>
         },
         {
           path:'/allToysDetails',
-          element: <AllToysDetails></AllToysDetails>
+          element: <PrivateRoute><AllToysDetails></AllToysDetails></PrivateRoute>
         },
         {
           path:"/*",
           element: <ErrorPage></ErrorPage>
+        },
+        {
+          path:'mytoys',
+          element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
         }
 
       ]

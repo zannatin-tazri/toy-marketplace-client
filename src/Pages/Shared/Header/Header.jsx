@@ -1,11 +1,22 @@
 import { Link } from 'react-router-dom';
 import logo from '../../../../public/image.ico'
+import { useContext } from 'react';
+import { AuthContext } from '../../../provider/AuthProvider';
 
 const Header = () => {
-    const navItems=<>
-    <li className=''><Link to='/'>Home</Link> </li>
-    <li className=''><Link to='/alltoys'>All Toys</Link> </li>
-    <li className=''><Link to='/blogs'>Blogs</Link> </li>
+    const handleLogout = () => {
+        logout()
+            .then(() => { })
+            .catch(error => console.log(error));
+    }
+
+    const { user, logout } = useContext(AuthContext);
+    const navItems = <>
+        <li className=''><Link to='/'>Home</Link> </li>
+        <li className=''><Link to='/alltoys'>All Toys</Link> </li>
+        <li className=''><Link to='/mytoys'>My Toys</Link> </li>
+        <li className=''><Link to='/blogs'>Blogs</Link> </li>
+
     </>
     return (
         <div>
@@ -16,7 +27,7 @@ const Header = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                           {navItems}
+                            {navItems}
                         </ul>
                     </div>
                     <Link to='/' className="btn btn-warning bg-amber-300 normal-case text-xl me-2"> <img src={logo} alt="" /></Link>
@@ -28,12 +39,26 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login' className="btn btn-warning bg-amber-300 mx-2 text-gray-600">Login</Link>
-                    <Link to='/register' className="btn btn-warning bg-amber-300 text-gray-600">Sign Up</Link>
+                    {
+                        user ? <>
+                            <span><div className="avatar">
+                                <div className="w-8 rounded m-3">
+                                    <img src={user.photoURL} alt="Tailwind-CSS-Avatar-component" />
+                                </div>
+                            </div> </span><button onClick={handleLogout} className='btn btn-warning bg-amber-300 text-gray-600'>
+                                Sign out</button></>
+                            : <>
+                                <Link to='/login' className="btn btn-warning bg-amber-300 mx-2 text-gray-600">Login</Link>
+                                <Link to='/register' className="btn btn-warning bg-amber-300 text-gray-600">Sign Up</Link>
+
+                            </>
+                    }
+
+
                 </div>
             </div>
         </div>
     );
 };
- 
+
 export default Header;
