@@ -7,7 +7,7 @@ const SubCategory3 = () => {
     const [subCategories3, setSubCategories3] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toy-marketplace-server-amber-gamma.vercel.app/toys')
             .then(res => res.json())
             .then(data => setSubCategories3(data))
             .catch(error => console.log(error));

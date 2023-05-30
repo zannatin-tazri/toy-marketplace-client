@@ -6,7 +6,7 @@ const TeddyDetails = () => {
     const [teddyDetails, setTeddyDetails] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/teddy')
+        fetch('https://toy-marketplace-server-amber-gamma.vercel.app/teddy')
             .then(res => res.json())
             .then(data => setTeddyDetails(data))
             .catch(error => console.log(error));

@@ -5,7 +5,7 @@ const HorseDetails = () => {
     const [horseDetails, setHorseDetails] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/horse')
+        fetch('https://toy-marketplace-server-amber-gamma.vercel.app/horse')
             .then(res => res.json())
             .then(data => setHorseDetails(data))
             .catch(error => console.log(error));

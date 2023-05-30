@@ -6,7 +6,7 @@ const DinosaurDetails = () => {
     const [dinosaurDetails, setDinosaurDetails] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toy-marketplace-server-amber-gamma.vercel.app/toys')
             .then(res => res.json())
             .then(data => setDinosaurDetails(data))
             .catch(error => console.log(error));
